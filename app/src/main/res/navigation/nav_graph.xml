@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imageListFragment">
+
+    <fragment
+        android:id="@+id/imageListFragment"
+        android:name="com.example.obvioustest.view.ImageListFragment"
+        android:label="fragment_image_list_list"
+        tools:layout="@layout/fragment_image_list_list">
+        <action
+            android:id="@+id/action_imageListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="imageList"
+            app:argType="com.example.obvioustest.model.SpaceImagesModel[]" />
+        <argument
+            android:name="position"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.obvioustest.view.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>
