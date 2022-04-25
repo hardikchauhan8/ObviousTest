@@ -1,0 +1,35 @@
+Take Home Exercise
+NASA Pictures app
+
+Instructions
+
+Your task is to create an Android app that will let the user browse through a list of images parsed from a JSON file.
+The JSON file can be found here.
+
+Make a git repository for the project and send this to us once you are done.
+Write code incrementally, make multiple commits, just like you would in a real project.
+
+The app should build directly using Android Studio or any other IDE of your choice, and the command line.
+
+Please make a note to not share this repository with anyone outside Obvious.
+
+Screens
+
+1. Images Grid Screen
+
+This is the home screen. When it launches, show a scrollable grid of pictures starting with the latest images first.
+When the user taps on an image that should open the image detail screen.
+
+
+2. Image Detail Screen
+
+This screen displays the full size image along with the metadata like title, description, etc.
+The user should also be able to swipe through images.
+
+Miscellaneous
+
+The criteria we use to score your submission are detailed on our Playbook at https://playbook.obvious.in/.
+Please read through the Engineering Hiring section.
+Host the solution as a public repository on any service (GitHub, Bitbucket, or Gitlab are all good options) and send us the link.
+We will evaluate the master branch unless otherwise specified.
+Feel free to use any open source libraries that you’d like.
