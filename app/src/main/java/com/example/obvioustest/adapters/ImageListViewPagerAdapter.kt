@@ -32,7 +32,7 @@ class ImageListViewPagerAdapter(
             .load(item.url)
             .placeholder(R.mipmap.ic_launcher)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .centerCrop()
+            .fitCenter()
             .into(holder.imgSpace);
         holder.tvTitle.text = item.title
         holder.tvDesc.text = item.explanation

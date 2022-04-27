@@ -1,6 +1,5 @@
 package com.example.obvioustest.view
 
-import android.R
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -17,26 +16,16 @@ class ImageListFragment : Fragment() {
 
     private lateinit var adapter: ImageListAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.main, menu)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentImageListListBinding.inflate(inflater, container, false)
 
-        binding.imageList.layoutManager =
+        binding.rcvImageList.layoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         adapter = ImageListAdapter(listOf())
-        binding.imageList.adapter = adapter
+        binding.rcvImageList.adapter = adapter
 
         imageListViewModel.getImageList().observe(viewLifecycleOwner) {
             adapter.loadImages(it)
